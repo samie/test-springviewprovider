@@ -54,7 +54,7 @@ public class SpringviewproviderTestApplicationTests extends TestBenchTestCase {
         for (String view : views) {
             getDriver().get(PAGE_URL+"#!"+view);
             LabelElement el = $(LabelElement.class).first();
-            Assert.assertNotNull("Label should not be null", el);
+            Assert.assertNotNull("Label should not be null for view "+view, el);
             if (MISSING_VIEW.equals(view)) {
                 Assert.assertTrue("Expected string 'error' but had '"+el.getText()+"'", el.getText().toLowerCase().contains("error"));
             } else {
