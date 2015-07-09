@@ -6,16 +6,16 @@ import com.vaadin.testbench.elements.LabelElement;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.springframework.boot.test.WebIntegrationTest;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringviewproviderTestApplication.class)
-@WebAppConfiguration
+@WebIntegrationTest
 public class SpringviewproviderTestApplicationTests extends TestBenchTestCase {
 
     private static final String MISSING_VIEW = "missing";
